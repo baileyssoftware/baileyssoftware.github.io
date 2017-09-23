@@ -1,0 +1,72 @@
+/*
+    color design
+    https://www.w3schools.com/colors/colors_monochromatic.asp
+
+    #E4F1F6 light
+    #67AFCB
+    #347B98
+    #1A3E4C
+    #092834 dark
+*/
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #2F5B6C;
+    color: #E4F1F6;
+    padding: 3em 1em;
+}
+
+header h1 {
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+nav {
+    background: #1A3E4C;
+    padding: 1em;
+}
+
+nav a {
+    color: #67AFCB;
+    text-decoration: none;
+    margin: 1em;
+    display: block;
+    float: left;
+}
+
+nav a:hover {
+    color: #E4F1F6;
+    text-decoration: underline;
+}
+
+nav a#active {
+    color: #E4F1F6;
+}
+
+main {
+    background: #E4F1F6;
+    padding: 1em;
+}
+
+section {
+    padding: 1em;
+}
+
+footer {
+    background: #092834;
+    padding: 1em;
+    color: #67AFCB;
+}
+
+div.clear {
+    clear: both;
+}
