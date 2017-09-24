@@ -1,1 +1,82 @@
-hello, world!
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bailey's Software</title>
+    <!-- css3-mediaqueries.js for IE8 or older -->
+    <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<script>
+function set_active_nav_item(nav_link)
+{
+    // get the nav links
+    var nav_links = document.querySelectorAll("nav a");
+
+    // remove all the link id attributes
+    for (i = 0; i < nav_links.length; i++)
+    {
+        nav_links[i].removeAttribute("id");
+    }
+
+    // set the target link's id to active
+    nav_link.id = "active";
+}
+</script>
+
+<body>
+
+<header id="home">
+    <h1>Bailey's Software</h1>
+    <p>Quality Software Tools and Services</p>
+</header>
+
+<nav>
+    <a onclick="set_active_nav_item(this)" href="#home">Home</a>
+    <a onclick="set_active_nav_item(this)" href="#products">Products</a>
+    <a onclick="set_active_nav_item(this)" href="#about">About</a>
+    <a onclick="set_active_nav_item(this)" href="#contact">Contact</a>
+    <div class="clear"></div>
+</nav>
+
+<main>
+    <section id="products">
+
+        <h1>Products</h1>
+
+        <section>
+            <h1>Product 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper non lorem in malesuada. Maecenas mollis odio ac lorem ultrices, quis posuere ante porttitor. Maecenas pharetra lorem eu tristique bibendum. Vestibulum porta gravida enim, sit amet tincidunt dolor mattis et. Duis ullamcorper ultricies euismod. Nunc sodales ornare posuere. Vivamus tempus ligula sit amet dui sollicitudin rutrum. Suspendisse mollis massa eget tortor fringilla, nec dignissim augue convallis. Curabitur bibendum non augue non maximus. Vivamus bibendum odio ut feugiat efficitur. Nunc eu rutrum leo. Maecenas bibendum erat non semper malesuada. Curabitur commodo, dolor ut lacinia mollis, quam elit consequat tellus, et pharetra tortor est vel arcu. In hendrerit tristique finibus. Nam quis nulla eget urna ullamcorper faucibus. Quisque varius diam in libero tempus facilisis. </p>
+        </section>
+
+        <section>
+            <h1>Product 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper non lorem in malesuada. Maecenas mollis odio ac lorem ultrices, quis posuere ante porttitor. Maecenas pharetra lorem eu tristique bibendum. Vestibulum porta gravida enim, sit amet tincidunt dolor mattis et. Duis ullamcorper ultricies euismod. Nunc sodales ornare posuere. Vivamus tempus ligula sit amet dui sollicitudin rutrum. Suspendisse mollis massa eget tortor fringilla, nec dignissim augue convallis. Curabitur bibendum non augue non maximus. Vivamus bibendum odio ut feugiat efficitur. Nunc eu rutrum leo. Maecenas bibendum erat non semper malesuada. Curabitur commodo, dolor ut lacinia mollis, quam elit consequat tellus, et pharetra tortor est vel arcu. In hendrerit tristique finibus. Nam quis nulla eget urna ullamcorper faucibus. Quisque varius diam in libero tempus facilisis. </p>
+        </section>
+
+    </section>
+
+    <section id="about">
+        <h1>About</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper non lorem in malesuada. Maecenas mollis odio ac lorem ultrices, quis posuere ante porttitor. Maecenas pharetra lorem eu tristique bibendum. Vestibulum porta gravida enim, sit amet tincidunt dolor mattis et. Duis ullamcorper ultricies euismod. Nunc sodales ornare posuere. Vivamus tempus ligula sit amet dui sollicitudin rutrum. Suspendisse mollis massa eget tortor fringilla, nec dignissim augue convallis. Curabitur bibendum non augue non maximus. Vivamus bibendum odio ut feugiat efficitur. Nunc eu rutrum leo. Maecenas bibendum erat non semper malesuada. Curabitur commodo, dolor ut lacinia mollis, quam elit consequat tellus, et pharetra tortor est vel arcu. In hendrerit tristique finibus. Nam quis nulla eget urna ullamcorper faucibus. Quisque varius diam in libero tempus facilisis. </p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper non lorem in malesuada. Maecenas mollis odio ac lorem ultrices, quis posuere ante porttitor. Maecenas pharetra lorem eu tristique bibendum. Vestibulum porta gravida enim, sit amet tincidunt dolor mattis et. Duis ullamcorper ultricies euismod. Nunc sodales ornare posuere. Vivamus tempus ligula sit amet dui sollicitudin rutrum. Suspendisse mollis massa eget tortor fringilla, nec dignissim augue convallis. Curabitur bibendum non augue non maximus. Vivamus bibendum odio ut feugiat efficitur. Nunc eu rutrum leo. Maecenas bibendum erat non semper malesuada. Curabitur commodo, dolor ut lacinia mollis, quam elit consequat tellus, et pharetra tortor est vel arcu. In hendrerit tristique finibus. Nam quis nulla eget urna ullamcorper faucibus. Quisque varius diam in libero tempus facilisis. </p>
+    </section>
+</main>
+
+<footer>
+    <p>Copyright &copy; Bailey's Software LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+<!-- https://www.w3schools.com/html/html5_semantic_elements.asp -->
