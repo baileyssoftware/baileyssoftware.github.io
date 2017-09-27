@@ -9,6 +9,8 @@
     #092834 dark
 */
 
+/****************************** global ******************************/
+
 * {
     margin:0;
     padding:0;
@@ -19,16 +21,23 @@ body {
     padding: 0;
 }
 
+div.clear {
+    clear: both;
+}
+
+ol, ul {
+    list-style-position: inside;
+}
+
+/****************************** header ******************************/
+
 header {
     background: #2F5B6C;
     color: #E4F1F6;
     padding: 3em 1em;
 }
 
-header h1 {
-    font-size: 30pt;
-    font-weight: bold;
-}
+/****************************** nav ******************************/
 
 nav {
     background: #1A3E4C;
@@ -53,27 +62,55 @@ nav a#active {
     text-decoration: underline;
 }
 
+/****************************** main ******************************/
+
 main {
     padding: 1em;
     background: #E4F1F6;
 }
 
-section {
-    padding: 1em;
+main > section {
     border-bottom: 1px solid #092834;
 }
 
-section:last-child {
-    padding: 1em;
+main > section:last-child {
     border: None;
 }
 
+/****************************** sections ******************************/
+
+section {
+    padding: 1em;
+}
+
+section.product section {
+    padding: 0.5em;
+}
+
+/****************************** footer ******************************/
 footer {
     background: #092834;
     padding: 1em;
     color: #67AFCB;
 }
 
-div.clear {
-    clear: both;
+/****************************** images ******************************/
+
+img.product_icon {
+    float: left;
+    margin: 0 1em 0 0;
+    height: 4em;
+}
+
+/****************************** console ******************************/
+
+.console_black {
+    background: black;
+    border: 5px solid #aaa;
+    font: "Lucida Console", "Courier New", sans-serif;
+    font-size: 1em;
+    color: #aaa;
+    margin-bottom: 1em;
+    box-shadow: 2px 2px 2px #000;
+    overflow: auto;
 }
