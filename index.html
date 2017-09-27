@@ -49,26 +49,137 @@ function set_active_nav_item(nav_link)
 
         <h1>Products</h1>
 
-        <section>
-            <h1>Product 1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper non lorem in malesuada. Maecenas mollis odio ac lorem ultrices, quis posuere ante porttitor. Maecenas pharetra lorem eu tristique bibendum. Vestibulum porta gravida enim, sit amet tincidunt dolor mattis et. Duis ullamcorper ultricies euismod. Nunc sodales ornare posuere. Vivamus tempus ligula sit amet dui sollicitudin rutrum. Suspendisse mollis massa eget tortor fringilla, nec dignissim augue convallis. Curabitur bibendum non augue non maximus. Vivamus bibendum odio ut feugiat efficitur. Nunc eu rutrum leo. Maecenas bibendum erat non semper malesuada. Curabitur commodo, dolor ut lacinia mollis, quam elit consequat tellus, et pharetra tortor est vel arcu. In hendrerit tristique finibus. Nam quis nulla eget urna ullamcorper faucibus. Quisque varius diam in libero tempus facilisis. </p>
-        </section>
+        <section class="product">
+            
+            <img class="product_icon" src="images/timetracker_icon.png" alt="stop watch icon">
+            
+            <section>
+                <h1>Time Tracker</h1>
+                <p>A command line application for tracking time during projects or anything else you might wish to track.</p>
+            </section>
+            
+            <section>
+                <h1>Features</h1>
+                <ul>
+                    <li>Uses sqlite database to store data</li>
+                    <li>Designed to be easily scripted/automated</li>
+                    <li>Database backup/restore function</li>
+                    <li>Light weight / no background processes</li>
+                    <li>Advanced functions for power users</li>
+                    <li>Easy task creation and task switching</li>
+                    <li>Summary command shows all task data and totals times</li>
+                </ul>
+            </section>
 
-        <section>
-            <h1>Product 2</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper non lorem in malesuada. Maecenas mollis odio ac lorem ultrices, quis posuere ante porttitor. Maecenas pharetra lorem eu tristique bibendum. Vestibulum porta gravida enim, sit amet tincidunt dolor mattis et. Duis ullamcorper ultricies euismod. Nunc sodales ornare posuere. Vivamus tempus ligula sit amet dui sollicitudin rutrum. Suspendisse mollis massa eget tortor fringilla, nec dignissim augue convallis. Curabitur bibendum non augue non maximus. Vivamus bibendum odio ut feugiat efficitur. Nunc eu rutrum leo. Maecenas bibendum erat non semper malesuada. Curabitur commodo, dolor ut lacinia mollis, quam elit consequat tellus, et pharetra tortor est vel arcu. In hendrerit tristique finibus. Nam quis nulla eget urna ullamcorper faucibus. Quisque varius diam in libero tempus facilisis. </p>
+            <section>
+                <h1>Operating Systems</h1>
+                <ul>
+                    <li>Windows</li>
+                    <li>Linux</li>
+                </ul>
+            </section>
+
+            <section>
+                <h1>Examples</h1>
+                <pre class="console_black">
+c:\>timetracker
+usage: timetracker [-h] [-v] [-c] [-e]
+                   {start,stop,list,switch,delete,doc,task,session,clock,backup}
+                   ...
+
+TimeTracker:
+
+    Easy task time tracking on the command line
+
+Basic Usage:
+
+    Start new task and the clock:   timetracker start "task name"
+    Start the clock:                timetracker start
+    Stop the clock:                 timetracker stop
+    List all tasks:                 timetracker list
+    Switch tasks:                   timetracker switch "task name"
+    Delete task:                    timetracker delete "task name"
+    Current task session info:      timetracker doc
+
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         show version information
+  -c, --config_dir      show config directory
+  -e, --examples        show usage examples
+
+Sub-Commands:
+  Type <command> -h/--help for help on each command
+
+  {start,stop,list,switch,delete,doc,task,session,clock,backup}
+    start               start the task
+    stop                stop the task
+    list                list the tasks
+    switch              switch the task
+    delete              delete the task
+    doc                 create documentation
+    task                manage tasks
+    session             manage sessions
+    clock               manage the clock
+    backup              backup database
+
+c:\>
+                </pre>
+                <pre class="console_black">
+c:\>timetracker -e
+
+Examples:
+
+    1. Start a new session, stop the session, list the current task, view the session time:
+
+        $ timetracker start task1 "example task"
+        INFO: setting session stop time
+        INFO: current session not set
+        INFO: creating new task
+        INFO: setting current task
+        INFO: creating new session
+        INFO: setting current session
+        INFO: setting session start time
+
+        $ timetracker stop
+        INFO: setting session stop time
+
+        $ timetracker list -u
+        id | name | description
+        1 | task1 | example task
+
+        $ timetracker doc
+        INFO: generating document
+
+        Current Task/Session Info:
+        task_id | session_id
+        1 | 1
+
+        Task Info:
+        id | name | description
+        1 | task1 | example task
+
+        Session Info:
+        id | task_id | start | stop | duration
+        1 | 1 | 2016-09-10 16:59:05.678482 | 2016-09-10 17:00:16.963486 | 0:01:11.285004
+
+c:\>
+                </pre>
+            </section>
+
+            <div class="clear"></div>
         </section>
 
     </section>
 
     <section id="about">
         <h1>About</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper non lorem in malesuada. Maecenas mollis odio ac lorem ultrices, quis posuere ante porttitor. Maecenas pharetra lorem eu tristique bibendum. Vestibulum porta gravida enim, sit amet tincidunt dolor mattis et. Duis ullamcorper ultricies euismod. Nunc sodales ornare posuere. Vivamus tempus ligula sit amet dui sollicitudin rutrum. Suspendisse mollis massa eget tortor fringilla, nec dignissim augue convallis. Curabitur bibendum non augue non maximus. Vivamus bibendum odio ut feugiat efficitur. Nunc eu rutrum leo. Maecenas bibendum erat non semper malesuada. Curabitur commodo, dolor ut lacinia mollis, quam elit consequat tellus, et pharetra tortor est vel arcu. In hendrerit tristique finibus. Nam quis nulla eget urna ullamcorper faucibus. Quisque varius diam in libero tempus facilisis. </p>
+        <p>What we are about is developing quality software that is useful and provides real value to customers.</p>
     </section>
 
     <section id="contact">
         <h1>Contact</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper non lorem in malesuada. Maecenas mollis odio ac lorem ultrices, quis posuere ante porttitor. Maecenas pharetra lorem eu tristique bibendum. Vestibulum porta gravida enim, sit amet tincidunt dolor mattis et. Duis ullamcorper ultricies euismod. Nunc sodales ornare posuere. Vivamus tempus ligula sit amet dui sollicitudin rutrum. Suspendisse mollis massa eget tortor fringilla, nec dignissim augue convallis. Curabitur bibendum non augue non maximus. Vivamus bibendum odio ut feugiat efficitur. Nunc eu rutrum leo. Maecenas bibendum erat non semper malesuada. Curabitur commodo, dolor ut lacinia mollis, quam elit consequat tellus, et pharetra tortor est vel arcu. In hendrerit tristique finibus. Nam quis nulla eget urna ullamcorper faucibus. Quisque varius diam in libero tempus facilisis. </p>
+        <p>Under Development.</p>
     </section>
 </main>
 
